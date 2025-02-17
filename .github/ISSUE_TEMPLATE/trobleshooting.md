@@ -1,6 +1,6 @@
 ---
 name: ✨ Troble Shooting
-about: 오류가 있었던 
+about: 문제를 해결했던 기록을 남겨봐요.
 title: "[Trouble Shooting] <기능 요약>"
 labels: bug
 assignees: ''
