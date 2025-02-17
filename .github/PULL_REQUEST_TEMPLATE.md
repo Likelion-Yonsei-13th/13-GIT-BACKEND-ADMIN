@@ -4,18 +4,17 @@
 <!-- 라벨 라벨로 담당자를 표시
  ex. Hoyoung027 -->
 
-### 🛰️ Issue Number
----
-<!-- 해당 PR과 연결된 이슈를 닫아주세요. closes #이슈넘버 -->
-
+## 🛰️ Issue Number
+<!-- 해당 PR과 연결된 이슈를 닫아주세요. close #이슈넘버 -->
+close #issue_number
+-
 
 ### 🪐 작업 내용
----
 <!-- 해당 PR에서 작업한 내용을 적어주세요. -->
-
+-
 
 ### 📚 Reference
----
+-
 
 
 ### ✅ Check List
