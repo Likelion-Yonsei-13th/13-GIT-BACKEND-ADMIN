@@ -13,7 +13,7 @@ def item_create(request):
         return redirect('item_create')
     
     # GET 요청이면 폼을 보여줌
-    # 이석원 잘생겼다.
+    # 이석원 못생겼다
     return render(request, 'item_form.html')
 
 def item_list(request):
