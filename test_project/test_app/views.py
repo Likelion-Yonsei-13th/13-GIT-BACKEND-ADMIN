@@ -23,3 +23,4 @@ def item_detail(request, pk):
     item = get_object_or_404(Item, pk=pk)
     return render(request, 'item_detail.html', {'item':item})
 
+#변호영 잘생겼다.
