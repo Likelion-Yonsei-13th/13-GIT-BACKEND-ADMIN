@@ -13,6 +13,7 @@ def item_create(request):
         return redirect('item_create')
     
     # GET 요청이면 폼을 보여줌
+    # 이석원 잘생겼다.
     return render(request, 'item_form.html')
 
 def item_list(request):
@@ -22,4 +23,3 @@ def item_list(request):
 def item_detail(request, pk):
     item = get_object_or_404(Item, pk=pk)
     return render(request, 'item_detail.html', {'item':item})
-
