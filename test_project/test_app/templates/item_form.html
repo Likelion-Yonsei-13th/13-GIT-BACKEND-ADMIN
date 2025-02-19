@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create New Item</title>
+    <title>{% if item %}Edit Item{% else %}Create New Item{% endif %}</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -59,16 +59,16 @@
 </head>
 <body>
     <div class="container">
-        <h1>새로운 글 작성하기</h1>
+        <h1>{% if item %}글 수정하기{% else %}글 쓰기{% endif %}</h1>
         <form method="POST">
             {% csrf_token %}
             <label for="name">작성자:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" value="{{ item.name|default_if_none:'' }}" required>
 
-            <label for="description">본문 내용:</label>
-            <textarea id="description" name="description" rows="4" required></textarea>
+            <label for="description">본문내용:</label>
+            <textarea id="description" name="description" rows="4" required>{{ item.description|default_if_none:'' }}</textarea>
 
-            <button type="submit">저장</button>
+            <button type="submit">{% if item %}수정하기{% else %}Save{% endif %}</button>
         </form>
     </div>
 </body>

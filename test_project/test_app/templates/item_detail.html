@@ -30,24 +30,38 @@
             font-size: 18px;
         }
 
-        a {
-            text-decoration: none;
-            color: #007bff;
-            display: inline-block;
-            margin-top: 10px;
+        .btn-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .btn {
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>{{ item.name }}</h1>
+        <p><strong>작성자:</strong> {{ item.name }}</p>
         <p><strong>본문 내용:</strong> {{ item.description }}</p>
         <p><strong>작성 일자:</strong> {{ item.created_at }}</p>
-        <a href="{% url 'item_list' %}">글 목록</a>
+
+        <div class="btn-container">
+            <a href="{% url 'item_update' item.pk %}" class="btn">수정하기</a>
+            <a href="{% url 'item_list' %}" class="btn">글 목록</a>
+        </div>
     </div>
 </body>
 </html>
