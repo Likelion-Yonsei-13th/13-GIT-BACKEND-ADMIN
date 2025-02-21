@@ -13,8 +13,10 @@ def item_create(request):
         return redirect('item_create')
     
     # GET 요청이면 폼을 보여줌
+    # 못생겼다
     return render(request, 'item_form.html')
 
+# 전체 아이템 조회
 def item_list(request):
     items = Item.objects.all()
     return render(request, 'item_list.html', {'items':items})
